@@ -3,7 +3,7 @@
 Here's an entirely hand made JSON Parser made in C made for Epitech's project !\
 It was made and well used for the **my_rpg** project in order to get scripting working (Using Tiled as a map editor). :slightly_smiling_face:\
 \
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=Davphla&repo=JSON-Parser&theme=gruvbox&hide_border=false)](https://github.com/Mikatech/my_rpg)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=Mikatech&repo=my_rpg&theme=gruvbox&hide_border=false)](https://github.com/Mikatech/my_rpg)
 
 ## How it works
 This was all made using linked list and the super well explained [JSON Website](https://www.json.org/json-fr.html) that explains pretty much everything behind this parser.\
@@ -38,3 +38,7 @@ typedef struct pars_data_s {
     struct pars_data_s *next;
 } pars_data_t;
 ```
+
+## Maintainer
+
+[Davphla](https://github.com/Davphla)
