@@ -11,13 +11,30 @@ All the present function are based from this website, and pretty much just adapt
 ## Main function
 **Checker :**
 ```C
-pars_data_t *parser_json(char *filepath);
-void pars_data_destroy(pars_data_t *data);
+pars_data_t *parser_json(char *filepath); // Used to transform any .json into a pars_data_t linked_list structures
+void pars_data_destroy(pars_data_t *data); // Destroy and free the linked list
 
-pars_data_t *json_search(pars_data_t *data, const char *to_find);
+pars_data_t *json_search(pars_data_t *data, const char *to_find); // Gets the pointer to the corresponding data_name structures, or return NULL
 
 ```
 **Writer :**
+```C
+int writer_json(char *filepath, pars_obj_t *obj, pars_data_t *data); // Used to transform any pars_data_t struct into a .json file
 ```
-int writer_json(char *filepath, pars_obj_t *obj, pars_data_t *data);
+
+**Data structures :**
+```C
+typedef union values_s {
+    int kint;
+    double kfloat;
+    char *kstr;
+    pars_data_t *kobj;
+} values_t;
+
+typedef struct pars_data_s {
+    char *data_name;
+    type_t type;
+    values_t values;
+    struct pars_data_s *next;
+} pars_data_t;
 ```
