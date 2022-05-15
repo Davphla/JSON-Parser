@@ -88,5 +88,6 @@ void pars_data_destroy(pars_data_t *data);
 void show_data(pars_data_t *data);
 pars_data_t *json_obj(char **str);
 pars_data_t *json_search(pars_data_t *data, const char *to_find);
+pars_data_t *parser_json(char *filepath);
 
 #endif /* !PARSER_H_ */

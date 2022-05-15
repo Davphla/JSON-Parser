@@ -34,11 +34,13 @@ pars_data_t *json_obj(char **str)
 
 pars_data_t *parser_json(char *filepath)
 {
-    char *str;
+    char *str = NULL;
     pars_data_t *data;
 
-    read_file(filepath, &str);
+    if (read_file(filepath, &str))
+        return NULL;
     data = json_obj(&str);
-    free(str);
+    if (str)
+        free(str);
     return (data);
 }

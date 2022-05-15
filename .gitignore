@@ -53,4 +53,7 @@ dkms.conf
 
 # VSCode
 .vscode
+.idea
+
 JSON_parser
+tests

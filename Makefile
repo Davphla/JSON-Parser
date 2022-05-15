@@ -5,23 +5,14 @@
 ## Makefile
 ##
 
-SRC_FILES	=	checker/main_parser.c \
-				checker/parser_destroy.c \
-				checker/parser_element.c \
-				checker/parser_tools.c \
-				writer/main_writer.c \
-				writer/writer_element.c \
-				writer/writer_tools.c
+CFLAGS 			=  --std=gnu99 -Wextra -Wall -g3 -fvisibility=hidden
+CPPFLAGS		= 	-I ./inc
 
-SRC_DIR	= src/
+SRC		:=		$(shell find src/ -name "*.c" -type f)
 
-SRC		=	$(foreach file, $(SRC_FILES), $(addprefix $(SRC_DIR), $(file)))
+OBJ		:=	$(SRC:.c=.o)
 
-OBJ		=	$(SRC:.c=.o)
-
-NAME	=	JSON_parser
-
-CFLAGS	=	-I./include/ -Wall
+NAME	=	libjson.a
 
 all:	$(NAME)
 	@echo "Build succesfull!"
