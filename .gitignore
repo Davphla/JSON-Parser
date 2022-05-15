@@ -56,4 +56,5 @@ dkms.conf
 .idea
 
 JSON_parser
-tests
+./tests
+a.out
