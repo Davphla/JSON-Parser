@@ -10,5 +10,5 @@ int main()
 {
     pars_data_t *data = parser_json("test.json");
 
-    printf("%s", data->data_name);
+    printf("%s", data->values.kstr);
 }
