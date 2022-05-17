@@ -1,31 +1,3 @@
-##
-## EPITECH PROJECT, 2020
-## rpg
-## File description:
-## Makefile
-##
+Hello world is
 
-CFLAGS 			=  --std=gnu99 -Wextra -Wall -g3 -O2 -fvisibility=hidden
-CPPFLAGS		= 	-I ./inc
-
-SRC		:=		$(shell find src/ -name "*.c" -type f)
-
-OBJ		:=	$(SRC:.c=.o)
-
-NAME	=	JSON_parser
-
-all:	$(NAME)
-	@echo "Build succesfull!"
-
-$(NAME):  $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-
-clean:
-	@rm -f $(OBJ)
-
-fclean:	clean
-	@rm -f $(NAME)
-
-re:	fclean $(NAME)
-
-.PHONY: all clean fclean re
+dzadza
